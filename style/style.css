@@ -368,25 +368,23 @@ Range Slider
       transition: all 0.3s ease-in-out; }
     .header__menu-toggle:hover {
       cursor: pointer; }
-    .header__menu-toggle#mobile-menu.is-active {
-      margin-right: 16px; }
-      .header__menu-toggle#mobile-menu.is-active .bar:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-        -ms-transform: translateY(8px) rotate(45deg);
-        -o-transform: translateY(8px) rotate(45deg);
-        transform: translateY(8px) rotate(45deg); }
-      .header__menu-toggle#mobile-menu.is-active .bar:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-        -ms-transform: translateY(8px) rotate(45deg);
-        -o-transform: translateY(8px) rotate(45deg);
-        transform: translateY(8px) rotate(45deg); }
-      .header__menu-toggle#mobile-menu.is-active .bar:nth-child(2) {
-        opacity: 0; }
-      .header__menu-toggle#mobile-menu.is-active .bar:nth-child(3) {
-        -webkit-transform: translateY(-8px) rotate(-45deg);
-        -ms-transform: translateY(-8px) rotate(-45deg);
-        -o-transform: translateY(-8px) rotate(-45deg);
-        transform: translateY(-8px) rotate(-45deg); }
+    .header__menu-toggle#mobile-menu.is-active .bar:nth-child(1) {
+      -webkit-transform: translateY(8px) rotate(45deg);
+      -ms-transform: translateY(8px) rotate(45deg);
+      -o-transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg); }
+    .header__menu-toggle#mobile-menu.is-active .bar:nth-child(1) {
+      -webkit-transform: translateY(8px) rotate(45deg);
+      -ms-transform: translateY(8px) rotate(45deg);
+      -o-transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg); }
+    .header__menu-toggle#mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0; }
+    .header__menu-toggle#mobile-menu.is-active .bar:nth-child(3) {
+      -webkit-transform: translateY(-8px) rotate(-45deg);
+      -ms-transform: translateY(-8px) rotate(-45deg);
+      -o-transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg); }
 
 .banner {
   background-color: #272733;
