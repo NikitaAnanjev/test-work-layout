@@ -8,7 +8,11 @@
   top: 0;
   z-index: 100;
   position: absolute;
-  padding: 0 1em;
+
+  @media #{$breakpoint-small} {
+    padding: 0 1em;
+  }
+
   &__wrapper {
     justify-content: space-between;
     flex-direction: row;
