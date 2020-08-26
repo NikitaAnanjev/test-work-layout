@@ -1,0 +1,5 @@
+
+.orders__file-input::before {
+    content: url(../assets/icons/file-icon-alt.png)' Прикрепить файл';
+}
+

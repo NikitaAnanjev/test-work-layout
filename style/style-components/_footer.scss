@@ -1,0 +1,101 @@
+// FOOTER
+.footer {
+  width: 100%;
+  min-height: 80px;
+  height: auto;
+  background-color: lighten($bg-main-color, 10%);
+  color: $text-gray;
+  display: flex;
+  align-items: center;
+  a {
+    color: $text-gray;
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($text-gray, 10%);
+    }
+  }
+  @media #{$breakpoint-below-medium} {
+    .flex {
+      align-items: flex-start;
+      flex-direction: column-reverse;
+    }
+  }
+  &__divider {
+    background-color: $text-gray;
+    width: 2px;
+    height: 15px;
+    float: left;
+    display: block;
+    margin-top: 32px;
+    @media #{$breakpoint-below-medium} {
+      opacity: 0.5;
+    }
+    @media #{$breakpoint-below-medium} {
+      width: 100%;
+      height: 2px;
+      margin-top: 0;
+      background-color: darken($text-gray, 40%);;
+    }
+  }
+  &__wrapper {
+    @media #{$breakpoint-below-medium} {
+      .flex {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  &__credits {
+    @media #{$breakpoint-large} {
+      align-items: center;
+      display: flex;
+      margin-right: -1em;
+      margin-left: -1em;
+      .column-lg-4 {
+        padding-right: 0;
+      }
+    }
+    font-size: 13px;
+    a {
+      color: $text-gray;
+      text-transform: uppercase;
+    }
+    @media #{$breakpoint-mobile} {
+      background-color: darken($bg-main-color, 10%);;
+    }
+  }
+  &__money {
+    .row {
+      @media #{$breakpoint-large} {
+        align-items: center;
+        display: flex;
+        margin-right: -1em;
+        margin-left: -1em;
+        .column-lg-4 {
+          padding-right: 0;
+        }
+      }
+    }
+    @media #{$breakpoint-mobile} {
+      background-color: lighten($bg-main-color, 5%);
+    }
+  }
+  &__info {
+    .row {
+      @media #{$breakpoint-large} {
+        display: flex;
+      }
+    }
+  }
+  &__item {
+    &-link {
+      color: #fff;
+      font-size: 13px;
+      display: inline-flex;
+      .link__icon {
+        margin-right: 15px;
+        color: $accent-color;
+      }
+    }
+  }
+}

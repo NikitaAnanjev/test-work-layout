@@ -1,0 +1,35 @@
+//BUTTONS
+.btn {
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+
+  font-size: 13px;
+  transition: .1s ease-in-out;
+  @at-root {
+    button#{&} {
+      padding: 13px 60px;
+    }
+  }
+
+  &--primary {
+    background-color: $accent-color;
+    border: 1px solid $text-light;
+    color: $text-light;
+    &:focus, &:hover, &:active {
+      background-color: lighten($accent-color, 5%);
+      border: 1px solid $text-light;
+      color: $text-light;
+    }
+  }
+  &--secondary {
+    background-color: $text-light;
+    border: 1px solid $text-gray;
+    color: $text-dark;
+    &:focus, &:hover, &:active {
+      background-color: darken($text-light, 5%);
+      border: 1px solid $text-light;
+      color: $text-dark;
+    }
+  }
+}

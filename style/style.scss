@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import 'style-components/variables';
+@import 'style-components/mixins';
+@import 'style-components/layout';
+@import 'style-components/grid';
+@import 'style-components/buttons';
+@import 'style-components/slider';
+@import 'style-components/header';
+@import 'style-components/banner';
+@import 'style-components/orders-section';
+@import 'style-components/footer';
+@import 'style-components/swipe-animation';
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.text {
+  &--accent {
+    color: $accent-color;
+  }
+  &--light {
+    color: $text-light;
+  }
+  &--gray {
+    color: $text-gray;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--right {
+    text-align: right;
+  }
+}
+
+a, li, p {
+  font-weight: 400;
+}
+p {
+  line-height: 1.4em;
+}
+@import 'style-components/responsive';

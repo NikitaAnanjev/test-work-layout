@@ -1,0 +1,271 @@
+.orders {
+  background-color: #272733;
+  background-image: linear-gradient(rgba(39, 39, 51, 0.9), rgba(39, 39, 51, 0.9)), url('../assets/images/map-bg-overlay.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    h2 {
+      font-size: 36px;
+      text-transform: uppercase;
+      margin: 15px 0;
+      @media #{$breakpoint-below-medium} {
+        font-size: 26px;
+      }
+    }
+    @media #{$breakpoint-below-medium} {
+      p {
+        width: 80%;
+        margin: auto;
+        line-height: 1.4em;
+      }
+    }
+  }
+  &__steps {
+    display: flex;
+    margin: 60px 0;
+    padding: 15px 0;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  &__steps-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    .icon {
+      padding: 15px;
+      background-color: $accent-color;
+      border: 4px solid darken($accent-color, 15%);
+      border-radius: 100px;
+      width: 45px;
+      height: 45px;
+      box-sizing: content-box;
+      font-size: 25px;
+      line-height: 42px;
+      vertical-align: middle;
+      align-content: space-around;
+      align-items: center;
+      z-index: 10;
+    }
+  }
+  &__divider--dotted {
+    width: 90px;
+    height: 6px;
+    margin-top: 40px;
+    margin-left: -50px;
+    margin-right: -50px;
+    background: url('../assets/elements/dots.png');
+    background-repeat: round space;
+  }
+  &__steps-title {
+    margin-top: 20px;
+    max-width: 70%;
+  }
+  // ORDER FORMS
+  &__forms {
+    width: 100%;
+    position: relative;
+    display: block;
+    &-field {
+      float: left;
+      position: relative;
+      display: block;
+      &_item {
+        width: 100%;
+        float: left;
+        padding: 15px;
+        border-radius: 3px;
+        &--no-padding {
+          padding: 0;
+        }
+      }
+    }
+    &-submit {
+      width: 33.333%;
+      display: block;
+      position: relative;
+      float: none;
+      margin: auto;
+      text-align: center;
+      @media all and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    &-btn {
+      width: 100%;
+      cursor: pointer;
+      @media all and (max-width: 768px) and (min-width: 500px) {
+        height: 48px;
+      }
+    }
+  }
+  &__file-input {
+    height: 50px;
+    cursor: pointer;
+    -moz-word-spacing: 5px;
+    -ms-word-spacing: 5px;
+    word-spacing: 5px;
+    &--hidden {
+      -moz-visibility: hidden;
+      -ms-visibility: hidden;
+      visibility: hidden;
+      -moz-display: none;
+      -ms-display: none;
+      display: none;
+    }
+    &::-webkit-file-upload-button {
+      -moz-visibility: hidden;
+      -ms-visibility: hidden;
+      visibility: hidden;
+    }
+    &::before {
+      font-size: 15px;
+      line-height: 22px;
+      text-transform: uppercase;
+      display: inline-flex;
+      flex-direction: row;
+      vertical-align: middle;
+      align-items: center;
+      background: $text-light;
+      border: 1px solid #999;
+      border-radius: 3px;
+      padding: 15px;
+      outline: none;
+      width: 100%;
+      color: $text-dark;
+      white-space: nowrap;
+      user-select: none;
+      cursor: pointer;
+      justify-content: center;
+      height: 50px;
+    }
+  }
+  &__slider {
+    cursor: default;
+    user-focus: none;
+    user-select: none;
+    &_counter {
+      color: $text-light;
+      background-color: transparent;
+      border: none;
+      text-align: right;
+      padding-right: 0;
+      width: 50px;
+    }
+  }
+  // SELECT
+  &__select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    &:hover::before {
+      color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    &--wrapper {
+      width: 100%;
+      float: left;
+      position: relative;
+      height: 50px;
+    }
+  }
+  .s-hidden {
+    visibility: hidden;
+  }
+  .styledSelect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $text-light;
+    color: lighten($text-dark, 10%);
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .styledSelect:after {
+    content: url(../assets/icons/arrow-down.svg);
+    color: $text-light;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    float: right;
+  }
+  .styledSelect:active, .styledSelect.active {
+    background-color: lighten($bg-main-color, 10%);
+    color: $text-light;
+    &:after {
+      content: url(../assets/icons/arrow-down-light.svg);
+    }
+  }
+  .options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+    background-color: transparentize($bg-main-color, .1);
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid;
+    border-color: transparent lighten($bg-main-color, 10%) lighten($bg-main-color, 10%) lighten($bg-main-color, 10%);
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $accent-color;
+    }
+  }
+  .options li {
+    font-family: 'Lato', sans-serif;
+    padding: 7px 15px;
+    margin: 0;
+    color: $text-light;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    cursor: crosshair;
+    &:first-child {
+      display: none;
+    }
+  }
+  .options li:hover {
+    background-color: $bg-main-color;
+    color: $accent-color;
+  }
+  .select {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    cursor: default;
+    margin: 1px 0 0 0;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+  }
+}

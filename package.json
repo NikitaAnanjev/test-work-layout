@@ -1,0 +1,11 @@
+{
+  "name": "Nikia",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "jquery": "^3.5.1"
+  }
+}

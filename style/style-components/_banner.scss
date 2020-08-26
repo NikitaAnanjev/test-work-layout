@@ -1,0 +1,72 @@
+.banner {
+  &__btn {
+    margin-top: 30px;
+  }
+  background-color: $bg-main-color;
+  background-image: url('../assets/images/banner-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  @media #{$breakpoint-below-medium}  {
+    &__wrapper {
+      min-height: 35vh;
+    }
+  }
+  &__wrapper {
+    min-height: 70vh;
+  }
+  &__content {
+    margin: auto 0;
+    @media #{$breakpoint-below-medium} {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    padding-top: 65px;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: $text-dark;
+    font-weight: 700;
+    @media #{$breakpoint-below-medium} {
+      padding-top: 45px;
+    }
+    @media #{$breakpoint-mobile} {
+      font-size: 35px;
+      padding-top: 30px;
+    }
+  }
+  &__subtitle {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    @media #{$breakpoint-below-medium} {
+      margin-top: 40px;
+    }
+    @media #{$breakpoint-mobile} {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+  }
+  &__list {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 15px;
+    padding: 0;
+    @media #{$breakpoint-below-medium} {
+      font-size: 14px;
+    }
+    li {
+      margin-bottom: 10px;
+      &:before {
+        content: "-";
+        margin-right: 5px;
+      }
+    }
+  }
+  &__btn {
+    margin-right: 25px;
+    @media #{$breakpoint-below-medium} {
+      margin-top: 20px;
+    }
+  }
+}

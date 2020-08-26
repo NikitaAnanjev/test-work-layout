@@ -1,0 +1,73 @@
+/* ====
+Range Slider
+================*/
+.rangeslider,
+.rangeslider__fill {
+  display: block;
+  border-radius: 10px;
+}
+
+.rangeslider {
+  position: relative;
+  margin: 10px auto;
+}
+
+.rangeslider:after {
+  top: 50%;
+  left: 0;
+  right: 0;
+  content: '';
+  width: 100%;
+  height: 5px;
+  margin-top: -2.5px;
+  border-radius: 5px;
+  position: absolute;
+  background: $bg-gray-color;
+}
+
+.rangeslider--horizontal {
+  width: 100%;
+  height: 28px;
+}
+
+.rangeslider__fill {
+  -moz-position: absolute;
+  -ms-position: absolute;
+  position: absolute;
+  -moz-background: $accent-color;
+  -ms-background: $accent-color;
+  background: $accent-color;
+}
+
+.rangeslider--horizontal .rangeslider__fill {
+  top: 0;
+  height: 100%;
+}
+
+.rangeslider__handle {
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  margin-top: -14px;
+  position: absolute;
+  background-color: $accent-color;
+  border: 3px solid darken($accent-color, 15%);
+  border-radius: 50% !important;
+  display: inline-block;
+}
+
+.rangeslider__handle:active {
+  background: lighten($accent-color, 15%);
+}
+
+.rangeslider__fill,
+.rangeslider__handle {
+  z-index: 1;
+}
+
+.rangeslider--horizontal .rangeslider__fill {
+  top: 50%;
+  height: 5px;
+  margin-top: -2.5px;
+}
