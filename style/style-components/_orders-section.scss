@@ -201,8 +201,8 @@
     color: $text-light;
     width: 20px;
     height: 20px;
-    position: relative;
-    float: right;
+    position: absolute;
+    right: 10px;
   }
   .styledSelect:active, .styledSelect.active {
     background-color: lighten($bg-main-color, 10%);

@@ -7,13 +7,13 @@ $default-border: #555;
     display: none;
   }
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 50%;
   margin-left: -150px;
 
   width: 300px;
   text-align: center;
-  z-index: 99;
+  z-index:1;
   .indicator-wrapper {
     transform: translate3d(0, 0, 0);
     width: 150px;

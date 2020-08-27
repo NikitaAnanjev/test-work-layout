@@ -617,8 +617,8 @@ Range Slider
     color: #fff;
     width: 20px;
     height: 20px;
-    position: relative;
-    float: right; }
+    position: absolute;
+    right: 10px; }
   .orders .styledSelect:active, .orders .styledSelect.active {
     background-color: #3d3d50;
     color: #fff;
@@ -759,12 +759,12 @@ Range Slider
 
 .menu-indicator {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 50%;
   margin-left: -150px;
   width: 300px;
   text-align: center;
-  z-index: 99; }
+  z-index: 1; }
   @media only screen and (min-width: 769px) {
     .menu-indicator {
       display: none; } }
