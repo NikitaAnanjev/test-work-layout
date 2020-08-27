@@ -73,11 +73,18 @@
       float: left;
       position: relative;
       display: block;
+      input {
+        &:focus, &:active {
+          //outline: 2px  solid $accent-color;
+          outline-color:$accent-color;
+        }
+      }
       &_item {
         width: 100%;
         float: left;
         padding: 15px;
         border-radius: 3px;
+
         &--no-padding {
           padding: 0;
         }
@@ -138,7 +145,7 @@
       width: 100%;
       color: $text-dark;
       white-space: nowrap;
-      user-select: none;
+      //user-select: none;
       cursor: pointer;
       justify-content: center;
       height: 50px;
@@ -187,6 +194,7 @@
     padding: 15px;
     width: 100%;
     cursor: pointer;
+    border-radius: 3px;
   }
   .styledSelect:after {
     content: url(../assets/icons/arrow-down.svg);
@@ -199,8 +207,13 @@
   .styledSelect:active, .styledSelect.active {
     background-color: lighten($bg-main-color, 10%);
     color: $text-light;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     &:after {
       content: url(../assets/icons/arrow-down-light.svg);
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
     }
   }
   .options {
@@ -238,7 +251,7 @@
     font-size: 18px;
     font-weight: 400;
     text-transform: capitalize;
-    cursor: crosshair;
+    cursor: pointer;
     &:first-child {
       display: none;
     }

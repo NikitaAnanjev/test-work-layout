@@ -513,6 +513,8 @@ Range Slider
       float: left;
       position: relative;
       display: block; }
+      .orders__forms-field input:focus, .orders__forms-field input:active {
+        outline-color: #3e9cdc; }
       .orders__forms-field_item {
         width: 100%;
         float: left;
@@ -570,7 +572,6 @@ Range Slider
       width: 100%;
       color: #3d3d3d;
       white-space: nowrap;
-      user-select: none;
       cursor: pointer;
       justify-content: center;
       height: 50px; }
@@ -609,7 +610,8 @@ Range Slider
     color: #575757;
     padding: 15px;
     width: 100%;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 3px; }
   .orders .styledSelect:after {
     content: url(../assets/icons/arrow-down.svg);
     color: #fff;
@@ -619,9 +621,14 @@ Range Slider
     float: right; }
   .orders .styledSelect:active, .orders .styledSelect.active {
     background-color: #3d3d50;
-    color: #fff; }
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
     .orders .styledSelect:active:after, .orders .styledSelect.active:after {
-      content: url(../assets/icons/arrow-down-light.svg); }
+      content: url(../assets/icons/arrow-down-light.svg);
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -moz-transform: rotate(180deg); }
   .orders .options {
     display: none;
     position: absolute;
@@ -653,7 +660,7 @@ Range Slider
     font-size: 18px;
     font-weight: 400;
     text-transform: capitalize;
-    cursor: crosshair; }
+    cursor: pointer; }
     .orders .options li:first-child {
       display: none; }
   .orders .options li:hover {

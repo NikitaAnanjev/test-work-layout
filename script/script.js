@@ -56,18 +56,18 @@ jQuery(document).ready(function ($) {
         // Show the unordered list when the styled div is clicked (also hides it if the div is clicked again)
         $styledSelect.click(function (e) {
             e.stopPropagation();
-            // e.preventDefault();
-            $('div.styledSelect.active').each(function (e) {
-                // $(this).removeClass('active').next('ul.options').hide();
-                $(this).removeClass('active');
-                $('#select-label').hide();
+            if ($(this).hasClass('active')){
+                $(this).removeClass('active').next('ul.options').hide();
+            } else {
 
-                // console.log('close');
-            });
-            $(this).toggleClass('active').next('ul.options').toggle();
-
-
+                $(this).toggleClass('active').next('ul.options').toggle();
+            }
+            // $('div.styledSelect.active').each(function (e) {
+            //     $(this).removeClass('active').next('ul.options').hide();
+            // });
+            // $(this).toggleClass('active').next('ul.options').toggle();
         });
+
 
 
         // Hides the unordered list when a list item is clicked and updates the styled div to show the selected list item
