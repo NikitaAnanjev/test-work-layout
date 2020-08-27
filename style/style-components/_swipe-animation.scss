@@ -10,10 +10,10 @@ $default-border: #555;
   top: 35%;
   left: 50%;
   margin-left: -150px;
-  z-index: 4;
+
   width: 300px;
   text-align: center;
-
+  z-index: 99;
   .indicator-wrapper {
     transform: translate3d(0, 0, 0);
     width: 150px;
@@ -22,7 +22,7 @@ $default-border: #555;
     .indicator-cursor {
       width: 25px;
       position: absolute;
-      opacity: 0.4;
+      opacity: .6;
       top: 1.75em;
       z-index: 5;
       animation: cursor-animation 1.5s $ease-out-quint;

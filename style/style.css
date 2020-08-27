@@ -762,9 +762,9 @@ Range Slider
   top: 35%;
   left: 50%;
   margin-left: -150px;
-  z-index: 4;
   width: 300px;
-  text-align: center; }
+  text-align: center;
+  z-index: 99; }
   @media only screen and (min-width: 769px) {
     .menu-indicator {
       display: none; } }
@@ -775,7 +775,7 @@ Range Slider
     .menu-indicator .indicator-wrapper .indicator-cursor {
       width: 25px;
       position: absolute;
-      opacity: 0.4;
+      opacity: .6;
       top: 1.75em;
       z-index: 5;
       animation: cursor-animation 1.5s cubic-bezier(0.23, 1, 0.72, 1);
