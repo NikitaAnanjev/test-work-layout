@@ -7,16 +7,11 @@ Landing page assignment.
 --------------------
 HTML,CSS,SCSS,jQuery
 --------------------
-YARN
+YARN - for local packages,
+coz of CDN included,
+you may skip the Yarn install
 --------------------
 
-### To begin with the Git package
-
-- Download or Clone
-- Get into the root folder
-- yarn install
-
--------------------
 
 Thank you and Good Luck
 
